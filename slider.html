@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <img class="x" src="a1.jpg" width="100%" height="600px">
+        <img class="x" src="a2.jpg" width="100%" height="600px">
+        <img class="x" src="a3.jpg" width="100%" height="600px">
+        <img class="x" src="a4.jpg" width="100%" height="600px">
+
+    </div>
+</body>
+<script>
+    demo = 0;
+
+    function slider() {
+        ar = document.getElementsByClassName('x');
+        for (var b = 0; b < ar.length; b++) {
+            ar[b].style.display = "none"
+        }
+        ar[demo].style.display = "block"
+        demo++
+        setTimeout(slider, 2000);
+    }
+    slider();
+</script>
+
+</html>
